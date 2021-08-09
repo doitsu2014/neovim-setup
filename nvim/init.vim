@@ -1,1 +1,4 @@
-lua require('plugins')
+lua require('init')
+
+set number
+

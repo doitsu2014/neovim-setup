@@ -1,8 +1,8 @@
-require'lspconfig'.rust_analyzer.setup{}
-require'lspconfig'.denols.setup{}
-require'lspconfig'.cssls.setup{}
-require'lspconfig'.html.setup{}
-require'lspconfig'.jsonls.setup{}
-require'lspconfig'.yamlls.setup{}
-require'lspconfig'.pyright.setup{}
-require'lspconfig'.vimls.setup{}
+require'lspconfig'.rust_analyzer.setup{on_attach=require'completion'.on_attach}
+require'lspconfig'.denols.setup{on_attach=require'completion'.on_attach}
+require'lspconfig'.cssls.setup{on_attach=require'completion'.on_attach}
+require'lspconfig'.html.setup{on_attach=require'completion'.on_attach}
+require'lspconfig'.jsonls.setup{on_attach=require'completion'.on_attach}
+require'lspconfig'.yamlls.setup{on_attach=require'completion'.on_attach}
+require'lspconfig'.pyright.setup{on_attach=require'completion'.on_attach}
+require'lspconfig'.vimls.setup{on_attach=require'completion'.on_attach}

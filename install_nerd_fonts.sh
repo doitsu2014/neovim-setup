@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 # Install Nerd Fonts
 __ScriptVersion="0.3"
-
 # Default values for option variables:
 quiet=false
 mode="copy"
@@ -10,7 +9,6 @@ extension="otf"
 patches=("Complete")
 compat=()
 installpath="user"
-
 # Usage info
 usage() {
   cat << EOF
@@ -18,9 +16,7 @@ Usage: ./install.sh [-q -v -h] [[--copy | --link] --clean | --list]
                     [--use-single-width-glyphs] [--windows] [--otf | --ttf]
                     [--install-to-user-path | --install-to-system-path ]
                     [--complete | --minimal | <patches>] [FONT...]
-
 General options:
-
   -q, --quiet                   Suppress output.
   -v, --version                 Print version number and exit.
   -h, --help                    Display this help and exit.

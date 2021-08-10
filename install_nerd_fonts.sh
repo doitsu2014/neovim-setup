@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
+mkdir -p ~/fonts
+cd ~/fonts
+
 if [ "$(uname)" == "Darwin"  ]; then
-  cd ~/Library/Fonts \
-    && curl -fLo "Blex Mono Nerd Font Complete.ttf" https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/IBMPlexMono/Mono/complete/Blex%20Mono%20Nerd%20Font%20Complete.ttf
+  brew tap homebrew/cask-fonts
+  brew install --cask font-hack-nerd-font
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux"  ]; then
-  mkdir -p ~/.local/share/fonts
-  cd ~/.local/share/fonts \
-    && curl -fLo "Blex Mono Nerd Font Complete.ttf" https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/IBMPlexMono/Mono/complete/Blex%20Mono%20Nerd%20Font%20Complete.ttf
+  sudo apt-get install fontconfig
+  sudo apt-get install fonts-hack-ttf -y
 fi
 
 

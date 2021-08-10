@@ -35,3 +35,4 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux"  ]; then
 fi
 
 bash ./install_language_servers.sh
+bash ./install_nerd_fonts.sh

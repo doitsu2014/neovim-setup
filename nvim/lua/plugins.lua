@@ -14,6 +14,7 @@ return require('packer').startup(function()
 
   -- nvim-lspconfig
   use 'neovim/nvim-lspconfig'
+  use 'glepnir/lspsaga.nvim'
 
   -- nvim-treesitter
   -- use 'nvim-treesitter/nvim-treesitter'

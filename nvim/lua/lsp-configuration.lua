@@ -50,5 +50,7 @@ end
 --require'lspconfig'.pyright.setup{}
 --require'lspconfig'.vimls.setup{}
 
--- local saga = require 'lspsaga'
--- saga.init_lsp_saga()
+local saga = require 'lspsaga'
+saga.init_lsp_saga {
+  error_sign = ''
+}

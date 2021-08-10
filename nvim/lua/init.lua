@@ -9,6 +9,11 @@ local g = vim.g      -- a table to access global variables
 local opt = vim.opt  -- to set options
 
 -------------------- OPTIONS -------------------------------
+cmd[[
+  set encoding=UTF-8
+  syntax enable
+]]
+
 ---- Choose normal dracula
 cmd[[colorscheme dracula]]
 

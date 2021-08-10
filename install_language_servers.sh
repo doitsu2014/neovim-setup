@@ -17,6 +17,9 @@ sudo npm i -g pyright
 # CSS, HTML
 sudo npm i -g vscode-langservers-extracted
 
+# Bash
+sudo npm i -g bash-language-server
+
 # {"javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx"}
 curl -fsSL https://deno.land/x/install/install.sh | sh
 

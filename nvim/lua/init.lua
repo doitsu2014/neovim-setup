@@ -39,6 +39,7 @@ opt.tabstop = 2                     -- Number of spaces tabs count for
 opt.termguicolors = true            -- True color support
 opt.wildmode = {'list', 'longest'}  -- Command-line completion mode
 opt.wrap = false                    -- Disable line wrap
+
 -------------------- TREE-SITTER ---------------------------
 -- local ts = require'nvim-treesitter.configs'
 -- ts.setup {ensure_installed = 'maintained', highlight = {enable = true}}

@@ -18,26 +18,37 @@ Usage: ./install.sh [-q -v -h] [[--copy | --link] --clean | --list]
                     [--use-single-width-glyphs] [--windows] [--otf | --ttf]
                     [--install-to-user-path | --install-to-system-path ]
                     [--complete | --minimal | <patches>] [FONT...]
+
 General options:
+
   -q, --quiet                   Suppress output.
   -v, --version                 Print version number and exit.
   -h, --help                    Display this help and exit.
+
   -c, --copy                    Copy the font files [default].
   -l, --link                    Symlink the font files.
   -L, --list                    List the font files to be installed (dry run).
+
   -C, --clean                   Recreate the root Nerd Fonts target directory
                                 (clean out all previous copies or symlinks).
+
   -s, --use-single-width-glyphs Install single-width glyphs variants.
   -w, --windows                 Install with limited internal font names.
+
   -U, --install-to-user-path    Install fonts to users home font path [default].
   -S, --install-to-system-path  Install fonts to global system path for all users, requires root.
+
   -O, --otf                     Prefer OTF font files [default].
   -T, --ttf                     Prefer TTF font files.
+
 Variation to install:
+
   -A, --complete                Variants with patches applied [default].
   -M, --minimal                 Variants with minimal patches applied.
+
 If you need more control over the included glyphs than when using the above
 two options, use any combination of these <patches>:
+
   --fontawesome                 Include Font Awesome.
   --fontlinux                   Include Font Linux.
   --octicons                    Include Octicons.

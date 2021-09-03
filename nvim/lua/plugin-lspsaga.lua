@@ -81,30 +81,35 @@ saga.init_lsp_saga {
 vim.cmd([[
 
 " Finder
-nnoremap <silent>gh <Cmd>Lspsaga lsp_finder<CR>
+nnoremap <silent> gh <Cmd>Lspsaga lsp_finder<CR>
 
 " code action
-nnoremap <silent><leader>ca <cmd>lua require('lspsaga.codeaction').code_action()<CR>
-vnoremap <silent><leader>ca :<C-U>lua require('lspsaga.codeaction').range_code_action()<CR>
+nnoremap <silent> <leader>ca <cmd>lua require('lspsaga.codeaction').code_action()<CR>
+vnoremap <silent> <leader>ca :<C-U>lua require('lspsaga.codeaction').range_code_action()<CR>
 
 " show hover doc
 nnoremap <silent>K :Lspsaga hover_doc<CR>
 
+" scroll down hover doc or scroll in definition preview
+nnoremap <C-f> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(1)<CR>
+" scroll up hover doc
+nnoremap <C-b> <cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1)<CR>
+
 " Signature Help
-nnoremap <silent>gs :Lspsaga signature_help<CR>
+nnoremap <silent> gs :Lspsaga signature_help<CR>
 
 " Rename
-nnoremap <silent>gr :Lspsaga rename<CR>
+nnoremap <silent> gr :Lspsaga rename<CR>
 
 " Preview Defination
-nnoremap <silent>gd :Lspsaga preview_definition<CR>
+nnoremap <silent> gd :Lspsaga preview_definition<CR>
 
 " Show diagnostic
-nnoremap <silent><leader>cd <cmd>lua require('lspsaga.diagnostic').show_line_diagnostics()<CR>
-nnoremap <silent><leader>cd :Lspsaga show_line_diagnostics<CR>
+nnoremap <silent> <leader>cd <cmd>lua require('lspsaga.diagnostic').show_line_diagnostics()<CR>
+nnoremap <silent> <leader>cd :Lspsaga show_line_diagnostics<CR>
 
 " only show diagnostic if cursor is over the area
-nnoremap <silent><leader>cc <cmd>lua require('lspsaga.diagnostic').show_cursor_diagnostics()<CR>
+nnoremap <silent> <leader>cc <cmd>lua require('lspsaga.diagnostic').show_cursor_diagnostics()<CR>
 
 " jump diagnostic
 nnoremap <silent> [e :Lspsaga diagnostic_jump_next<CR>

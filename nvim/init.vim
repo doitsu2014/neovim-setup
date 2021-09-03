@@ -4,9 +4,18 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'kabouzeid/nvim-lspinstall'
 Plug 'glepnir/lspsaga.nvim'
 
-Plug 'Mofiqul/dracula.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-lua/completion-nvim'
+
+
+Plug 'Mofiqul/dracula.nvim'
+Plug 'hoob3rt/lualine.nvim'
+" If you want to have icons in your statusline choose one of these
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 

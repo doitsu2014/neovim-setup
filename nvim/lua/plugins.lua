@@ -1,2 +1,2 @@
-require('plugins/plugin-lspconfig')
-require('plugins/plugin-lspsaga')
+require('plugin-lspconfig')
+require('plugin-lspsaga')

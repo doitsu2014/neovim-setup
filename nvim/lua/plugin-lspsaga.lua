@@ -111,8 +111,8 @@ nnoremap <silent> [e :Lspsaga diagnostic_jump_next<CR>
 nnoremap <silent> ]e :Lspsaga diagnostic_jump_prev<CR>
 
 " float terminal also you can pass the cli command in open_float_terminal function
-nnoremap <silent> <A-d> <cmd>lua require('lspsaga.floaterm').open_float_terminal()<CR> -- or open_float_terminal('lazygit')<CR>
-tnoremap <silent> <A-d> <C-\><C-n>:lua require('lspsaga.floaterm').close_float_terminal()<CR>
+nnoremap <leader>ft :Lspsaga open_floaterm<CR>
+tnoremap <leader>ft <C-\><C-n>:Lspsaga close_floaterm<CR>
 
 ]])
 

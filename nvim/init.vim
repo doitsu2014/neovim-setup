@@ -4,8 +4,12 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'kabouzeid/nvim-lspinstall'
 Plug 'glepnir/lspsaga.nvim'
 
+Plug 'Mofiqul/dracula.nvim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
 call plug#end()
 
+colorscheme dracula
 set number relativenumber
 set nu rnu
 

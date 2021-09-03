@@ -4,25 +4,6 @@ echo "**                                                               Downloadi
 echo "*************** ************* ************* ************* *************  ************* ************* ************* ************* ************* ************* ***********"
 echo "************************************************************************************************************************************************************************"
 
-# Yaml
-sudo npm i -g yarn
-yarn global add yaml-language-server
-
-# Vim
-sudo npm i -g vim-language-server
-
-# Python
-sudo npm i -g pyright
-
-# CSS, HTML
-sudo npm i -g vscode-langservers-extracted
-
-# Bash
-sudo npm i -g bash-language-server
-
-# {"javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx"}
-curl -fsSL https://deno.land/x/install/install.sh | sh
-
 # rust-analyzer
 if [ "$(uname)" == "Darwin"  ]; then
     brew install rust-analyzer -y

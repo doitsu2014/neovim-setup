@@ -1,4 +1,3 @@
-require('setup/packer')
 require('plugins')
 require('keymaps')
 require('lsp-configuration')

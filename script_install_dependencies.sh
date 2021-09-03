@@ -1,23 +1,18 @@
 #!/bash/sh
-
 echo "************************************************************************************************************************************************************************"
 echo "*************** ************* ************* ************* *************  ************* ************* ************* ************* ************* ************* ******** **"
 echo "*                                                                        Downloading dependencies                                                                     **"
 echo "*************** ************* ************* ************* *************  ************* ************* ************* ************* ************* ************* ******** **"
 echo "************************************************************************************************************************************************************************"
 
-# Rust
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-
 if [ "$(uname)" == "Darwin"  ]; then
     brew install curl
     brew install git
-    brew install build-essential cmake
-    brew install python python3 python3-pip
-    brew install nodejs npm
-    brew isntall unzip
+    brew install python python3
+    brew install node
+    brew install zip unzip
     # neovim 0.5.x
-    brew install neovim -y
+    brew install neovim
 
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux"  ]; then
     # this if statement is used to install dependency packages of ubuntu which has the version > 16.x.x
@@ -33,6 +28,13 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux"  ]; then
     # neovim 0.5.x
     sudo apt-get install neovim -y
 fi
+
+
+# Rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+# Npm Yarn
+sudo npm i -g yarn
 
 bash ./install_language_servers.sh
 bash ./install_nerd_fonts.sh

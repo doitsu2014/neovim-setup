@@ -1,3 +1,4 @@
-lua require('init')
+" lua require('init')
+" set number
 
-set number
+

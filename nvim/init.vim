@@ -6,6 +6,7 @@ Plug 'glepnir/lspsaga.nvim'
 
 Plug 'Mofiqul/dracula.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-lua/completion-nvim'
 
 call plug#end()
 

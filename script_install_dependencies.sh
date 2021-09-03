@@ -5,6 +5,10 @@ echo "*                                                                        D
 echo "*************** ************* ************* ************* *************  ************* ************* ************* ************* ************* ************* ******** **"
 echo "************************************************************************************************************************************************************************"
 
+
+# Rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
 if [ "$(uname)" == "Darwin"  ]; then
     brew install curl
     brew install git
@@ -12,6 +16,8 @@ if [ "$(uname)" == "Darwin"  ]; then
     brew install node
     brew install zip unzip
     # neovim 0.5.x
+    brew install tree-sitter 
+    brew install luajit 
     brew install neovim
 
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux"  ]; then
@@ -28,10 +34,6 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux"  ]; then
     # neovim 0.5.x
     sudo apt-get install neovim -y
 fi
-
-
-# Rust
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # Npm Yarn
 sudo npm i -g yarn

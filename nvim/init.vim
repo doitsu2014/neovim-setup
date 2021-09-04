@@ -12,6 +12,7 @@ Plug 'nvim-lua/completion-nvim'
 
 
 Plug 'Mofiqul/dracula.nvim'
+Plug 'kyazdani42/nvim-tree.lua'
 Plug 'hoob3rt/lualine.nvim'
 " If you want to have icons in your statusline choose one of these
 Plug 'kyazdani42/nvim-web-devicons'
@@ -43,3 +44,6 @@ nnoremap <C-K> <C-W>k
 nnoremap <C-L> <C-W>l
 
 lua require('init')
+
+filetype plugin on
+source ~/.config/nvim/plugin-nvimtree.vim

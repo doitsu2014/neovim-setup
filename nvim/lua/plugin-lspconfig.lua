@@ -1,5 +1,34 @@
 -- keymaps
 local on_attach = function(client, bufnr)
+  require'completion'.on_attach(client, bufnr)
+  vim.lsp.protocol.CompletionItemKind = {
+    '', -- Text
+    '', -- Method
+    '', -- Function
+    '', -- Constructor
+    '', -- Field
+    '', -- Variable
+    '', -- Class
+    'ﰮ', -- Interface
+    '', -- Module
+    '', -- Property
+    '', -- Unit
+    '', -- Value
+    '', -- Enum
+    '', -- Keyword
+    '﬌', -- Snippet
+    '', -- Color
+    '', -- File
+    '', -- Reference
+    '', -- Folder
+    '', -- EnumMember
+    '', -- Constant
+    '', -- Struct
+    '', -- Event
+    'ﬦ', -- Operator
+    '', -- TypeParameter
+  }
+
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
   local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
 
@@ -7,10 +36,10 @@ local on_attach = function(client, bufnr)
 
   -- Mappings.
   local opts = { noremap=true, silent=true }
-  buf_set_keymap('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
+  -- buf_set_keymap('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
   -- buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
   -- buf_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
-  buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
+  -- buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
   --buf_set_keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
   buf_set_keymap('n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
   buf_set_keymap('n', '<space>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
@@ -72,8 +101,8 @@ local function make_config()
     -- enable snippet support
     capabilities = capabilities,
     -- map buffer local keybindings when the language server attaches
-    -- on_attach = on_attach,
-    on_attach = require'completion'.on_attach
+    on_attach = on_attach,
+    -- on_attach = require'completion'.on_attach
   }
 end
 

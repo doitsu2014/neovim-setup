@@ -102,7 +102,7 @@ nnoremap <silent> gs :Lspsaga signature_help<CR>
 nnoremap <silent> gr :Lspsaga rename<CR>
 
 " Preview Defination
-nnoremap <silent> gd :Lspsaga preview_definition<CR>
+nnoremap <silent> pd :Lspsaga preview_definition<CR>
 
 " Show diagnostic
 nnoremap <silent> <leader>cd <cmd>lua require('lspsaga.diagnostic').show_line_diagnostics()<CR>

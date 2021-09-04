@@ -21,6 +21,9 @@ Plug 'ryanoasis/vim-devicons'
 " Debugger
 Plug 'puremourning/vimspector'
 
+" Markdown Preview
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+
 call plug#end()
 
 colorscheme dracula

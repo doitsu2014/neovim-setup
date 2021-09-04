@@ -38,4 +38,6 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux"  ]; then
     cargo install tree-sitter-cli
 fi
 
+sudo npm install -g yarn
+
 bash ./install_nerd_fonts.sh

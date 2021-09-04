@@ -31,9 +31,11 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux"  ]; then
     #sudo add-apt-repository ppa:neovim-ppa/unstable -y
     sudo apt-get install python-dev python3-dev
     # neovim 0.5.x
-    sudo apt-get install tree-sitter -y
+    sudo add-apt-repository ppa:neovim-ppa/unstable
+    sudo apt-get update
     sudo apt-get install luajit -y
     sudo apt-get install neovim -y
+    cargo install tree-sitter-cli
 fi
 
 bash ./install_nerd_fonts.sh

@@ -3,13 +3,13 @@ call plug#begin(stdpath('data') .. '/plugged')
 Plug 'neovim/nvim-lspconfig'
 Plug 'kabouzeid/nvim-lspinstall'
 Plug 'glepnir/lspsaga.nvim'
+Plug 'b3nj5m1n/kommentary'
 
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-lua/completion-nvim'
-
 
 Plug 'Mofiqul/dracula.nvim'
 Plug 'kyazdani42/nvim-tree.lua'
@@ -23,6 +23,10 @@ call plug#end()
 colorscheme dracula
 set number relativenumber
 set nu rnu
+
+set tabstop=4
+set shiftwidth=4
+set expandtab
 
 let mapleader = ","
 nnoremap <leader>w :w<cr>

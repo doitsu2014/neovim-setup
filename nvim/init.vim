@@ -18,6 +18,9 @@ Plug 'hoob3rt/lualine.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'ryanoasis/vim-devicons'
 
+" Debugger
+Plug 'puremourning/vimspector'
+
 call plug#end()
 
 colorscheme dracula
@@ -51,3 +54,4 @@ lua require('init')
 
 filetype plugin on
 source ~/.config/nvim/plugin-nvimtree.vim
+source ~/.config/nvim/plugin-vimspector.vim

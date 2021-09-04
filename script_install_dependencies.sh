@@ -18,7 +18,6 @@ if [ "$(uname)" == "Darwin"  ]; then
     brew install tree-sitter 
     brew install luajit 
     brew install neovim
-    brew install ninja
 
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux"  ]; then
     # this if statement is used to install dependency packages of ubuntu which has the version > 16.x.x
@@ -32,10 +31,9 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux"  ]; then
     #sudo add-apt-repository ppa:neovim-ppa/unstable -y
     sudo apt-get install python-dev python3-dev
     # neovim 0.5.x
+    sudo apt-get install tree-sitter -y
+    sudo apt-get install luajit -y
     sudo apt-get install neovim -y
-
-    sudo apt-get install ninja-build
-
 fi
 
 bash ./install_nerd_fonts.sh

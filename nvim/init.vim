@@ -24,6 +24,9 @@ Plug 'puremourning/vimspector'
 " Markdown Preview
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
+" Emmet
+Plug 'mattn/emmet-vim'
+
 call plug#end()
 
 colorscheme dracula

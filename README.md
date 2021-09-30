@@ -13,7 +13,7 @@ bash install.sh
 
 ```
 " Leader key
-nnoremap <leader>w :w<cr>
+let mapleader = ","
 
 " Save buffers
 nnoremap <leader>w :w<cr>

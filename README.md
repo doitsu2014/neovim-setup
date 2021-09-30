@@ -15,7 +15,7 @@ bash install.sh
 " Leader key
 nnoremap <leader>w :w<cr>
 
-" Save file
+" Save buffers
 nnoremap <leader>w :w<cr>
 
 " Tabs move
@@ -141,11 +141,14 @@ nnoremap <silent> <leader>cc <cmd>lua require('lspsaga.diagnostic').show_cursor_
 " jump diagnostic
 nnoremap <silent> [e :Lspsaga diagnostic_jump_next<CR>
 nnoremap <silent> ]e :Lspsaga diagnostic_jump_prev<CR>
+```
 
+### Terminal
+
+```
 " float terminal also you can pass the cli command in open_float_terminal function
 nnoremap <leader>ft :Lspsaga open_floaterm<CR>
 tnoremap <leader>ft <C-\><C-n>:Lspsaga close_floaterm<CR>
-
 ```
 
 ### Comment (Kommentary)

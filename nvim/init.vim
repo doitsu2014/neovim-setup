@@ -61,3 +61,4 @@ lua require('init')
 filetype plugin on
 source ~/.config/nvim/plugin-nvimtree.vim
 source ~/.config/nvim/plugin-vimspector.vim
+source ~/.config/nvim/plugin-emmet.vim

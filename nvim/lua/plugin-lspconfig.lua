@@ -140,6 +140,21 @@ local function setup_servers()
       config.filetypes = { "aspnetcorerazor", "blade", "django-html", "edge", "ejs", "eruby", "gohtml", "haml", "handlebars", "hbs", "html", "html-eex", "jade", "leaf", "liquid", "mdx", "mustache", "njk", "nunjucks", "php", "razor", "slim", "twig", "vue", "svelte" }
     end
 
+    if server == "diagnosticls" then
+      config.filetypes = { "markdown" };
+      config.init_options = {
+        formatters = {
+          prettier = {
+            command = 'prettier',
+            args = { '--stdin-filepath', '%filename' }
+          }
+        },
+        formatFiletypes = {
+          markdown = 'prettier'
+        }
+      };
+    end
+
     require'lspconfig'[server].setup(config)
   end
 end

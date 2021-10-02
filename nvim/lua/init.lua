@@ -11,7 +11,7 @@ local ensured_servers = { "rust",
   "vim",
   "csharp",
   "dockerfile",
-  "custom_diagnosticls"
+  "diagnosticls"
 }
 
 -- require('custom_lspservers/setup')

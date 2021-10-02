@@ -131,8 +131,13 @@ local function setup_servers()
     if server == "sourcekit" then
       config.filetypes = {"swift", "objective-c", "objective-cpp"}; -- we don't want c and cpp!
     end
+
     if server == "clangd" then
       config.filetypes = {"c", "cpp"}; -- we don't want objective-c and objective-cpp!
+    end
+
+    if server == "html" then
+      config.filetypes = { "aspnetcorerazor", "blade", "django-html", "edge", "ejs", "eruby", "gohtml", "haml", "handlebars", "hbs", "html", "html-eex", "jade", "leaf", "liquid", "mdx", "mustache", "njk", "nunjucks", "php", "razor", "slim", "twig", "vue", "svelte" }
     end
 
     require'lspconfig'[server].setup(config)

@@ -9,6 +9,10 @@ bash install.sh
 
 ## Mapping Syntax
 
+- asdf 
+  - asdf
+
+
 ### Standard
 
 ```

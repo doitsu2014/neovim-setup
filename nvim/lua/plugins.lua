@@ -5,6 +5,6 @@ require('plugin-kommentary')
 
 require('plugin-autocompletion')
 require('plugin-lualine')
--- require('plugin-nvimtree')
+require('plugin-nvimtree')
 
 require('plugin-telescope')

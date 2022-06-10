@@ -32,6 +32,11 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux"  ]; then
     sudo add-apt-repository ppa:neovim-ppa/unstable
     sudo apt-get update
     sudo apt-get install luajit -y
+
+    echo 'add repository ppa:neovim-ppa/stable'
+    sudo apt install software-properties-common
+    sudo add-apt-repository ppa:neovim-ppa/stable
+    sudo apt update
     sudo apt-get install neovim -y
     cargo install tree-sitter-cli
 fi

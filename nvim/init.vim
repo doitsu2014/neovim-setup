@@ -1,8 +1,8 @@
 call plug#begin(stdpath('data') .. '/plugged')
 
 Plug 'neovim/nvim-lspconfig'
-" Plug 'kabouzeid/nvim-lspinstall'
-" Plug 'williamboman/nvim-lsp-installer'
+Plug 'kabouzeid/nvim-lspinstall'
+Plug 'williamboman/nvim-lsp-installer'
 Plug 'glepnir/lspsaga.nvim'
 
 Plug 'b3nj5m1n/kommentary'

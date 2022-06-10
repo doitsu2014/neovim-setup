@@ -25,7 +25,7 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux"  ]; then
     sudo apt-get install libtool autoconf automake cmake libncurses5-dev g++ build-essential -y
     sudo apt-get install curl -y
     sudo apt-get install git -y
-    sudo apt-get install nodejs -y
+    sudo apt-get install nodejs npm -y
     sudo apt-get install zip unzip -y
     sudo apt-get install python-dev python-pip python3-dev python3-pip
     # neovim 0.7.x

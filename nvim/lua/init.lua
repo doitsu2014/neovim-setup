@@ -102,5 +102,4 @@ require('nvim-cursorline').setup {
 require('Comment').setup()
 require('plugins')
 
-
 return

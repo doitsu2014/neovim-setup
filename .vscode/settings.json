@@ -3,6 +3,7 @@
 		"unused-function"
 	],
 	"Lua.diagnostics.globals": [
-		"vim"
+		"vim",
+		"use"
 	]
 }

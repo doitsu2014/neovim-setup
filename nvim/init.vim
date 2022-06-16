@@ -1,34 +1,37 @@
-call plug#begin(stdpath('data') .. '/plugged')
+" call plug#begin(stdpath('data') .. '/plugged')
 
-Plug 'neovim/nvim-lspconfig'
-Plug 'kabouzeid/nvim-lspinstall'
-Plug 'williamboman/nvim-lsp-installer'
-Plug 'glepnir/lspsaga.nvim'
+" Plug 'neovim/nvim-lspconfig'
+" Plug 'kabouzeid/nvim-lspinstall'
+" Plug 'williamboman/nvim-lsp-installer'
+" Plug 'glepnir/lspsaga.nvim'
 
-Plug 'b3nj5m1n/kommentary'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
+" Plug 'b3nj5m1n/kommentary'
+" Plug 'nvim-lua/plenary.nvim'
+" Plug 'nvim-telescope/telescope.nvim'
 
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'nvim-lua/completion-nvim'
+" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+" Plug 'nvim-lua/completion-nvim'
 
-Plug 'Mofiqul/dracula.nvim'
-Plug 'kyazdani42/nvim-tree.lua'
-Plug 'hoob3rt/lualine.nvim'
+" Plug 'Mofiqul/dracula.nvim'
+" Plug 'kyazdani42/nvim-tree.lua'
+" Plug 'hoob3rt/lualine.nvim'
 " If you want to have icons in your statusline choose one of these
-Plug 'kyazdani42/nvim-web-devicons'
-Plug 'ryanoasis/vim-devicons'
+" Plug 'kyazdani42/nvim-web-devicons'
+" Plug 'ryanoasis/vim-devicons'
 
 " Debugger
-Plug 'puremourning/vimspector'
+" Plug 'puremourning/vimspector'
 
 " Markdown Preview
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+" Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
 " Emmet
-Plug 'mattn/emmet-vim'
+" Plug 'mattn/emmet-vim'
 
-call plug#end()
+" call plug#end()
+
+
+lua require('init')
 
 colorscheme dracula
 set number relativenumber
@@ -58,8 +61,6 @@ nnoremap <C-K> <C-W>k
 nnoremap <C-L> <C-W>l
 
 nnoremap <leader>l :noh<CR>
-
-lua require('init')
 
 filetype plugin on
 source ~/.config/nvim/plugin-nvimtree.vim

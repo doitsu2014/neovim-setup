@@ -28,16 +28,11 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux"  ]; then
     sudo apt-get install nodejs npm -y
     sudo apt-get install zip unzip -y
     sudo apt-get install python-dev python-pip python3-dev python3-pip
-    # neovim 0.7.x
-    sudo add-apt-repository ppa:neovim-ppa/unstable
-    sudo apt-get update
-    sudo apt-get install luajit -y
 
-    echo 'add repository ppa:neovim-ppa/stable'
-    sudo apt install software-properties-common
-    sudo add-apt-repository ppa:neovim-ppa/stable
-    sudo apt update
-    sudo apt-get install neovim -y
+    # neovim 0.7.0
+    sudo apt-get install luajit -y
+    echo 'download and install neovim 0.7.0'
+    sudo bash ./script_download_neovim.sh
     cargo install tree-sitter-cli
 fi
 

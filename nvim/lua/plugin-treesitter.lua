@@ -15,17 +15,13 @@ require'nvim-treesitter.configs'.setup {
     "vim",
     "lua"
   },
+  sync_install = false,
   highlight = {
     enable = true,
     disable = {
-
     }
-  },
-  indent = {
-    enable = false,
-    disable = {}
   }
 }
 
 local parser_config = require'nvim-treesitter.parsers'.get_parser_configs()
-parser_config.tsx.used_by = { "javascript", "typescript.tsx" }
+parser_config.tsx.filetype_to_parsername = { "javascript", "typescript.tsx" }

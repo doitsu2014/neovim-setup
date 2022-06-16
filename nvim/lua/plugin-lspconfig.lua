@@ -58,6 +58,7 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
 vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts)
 
 local on_attach = function(client, bufnr)
+  require "lsp-format".on_attach(client)
   -- Enable completion triggered by <c-x><c-o>
   vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 
@@ -175,3 +176,6 @@ require('lspconfig')['rust_analyzer'].setup {
     ["rust-analyzer"] = {}
   }
 }
+
+require("lsp-format").setup {}
+require "lspconfig".gopls.setup { on_attach = on_attach }

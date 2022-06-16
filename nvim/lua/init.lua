@@ -13,6 +13,7 @@ require('packer').startup(function()
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-cmdline'
   use 'hrsh7th/nvim-cmp'
+  use "lukas-reineke/lsp-format.nvim"
 
   -- Markdown
   use 'ellisonleao/glow.nvim'
@@ -100,5 +101,6 @@ require('nvim-cursorline').setup {
 }
 require('Comment').setup()
 require('plugins')
+
 
 return

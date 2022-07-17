@@ -33,7 +33,7 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux"  ]; then
     sudo apt-get install luajit -y
     echo 'download and install neovim 0.7.0'
     sudo bash ./script_download_neovim.sh
-    cargo install tree-sitter-cli
 fi
 
+cargo install tree-sitter-cli
 sudo npm install -g yarn

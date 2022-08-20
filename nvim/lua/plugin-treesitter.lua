@@ -13,7 +13,8 @@ require'nvim-treesitter.configs'.setup {
     "json",
     "swift",
     "vim",
-    "lua"
+    "lua",
+    "hcl"
   },
   sync_install = false,
   highlight = {

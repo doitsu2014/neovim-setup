@@ -12,7 +12,10 @@ local DEFAULT_SETTINGS = {
     "tsserver",
     "eslint",
     "cssls",
+
     "terraformls",
+    "tflint",
+
     "rust_analyzer",
     "vimls",
     "marksman",

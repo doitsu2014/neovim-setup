@@ -16,7 +16,7 @@ require'nvim-treesitter.configs'.setup {
     "lua",
     "hcl"
   },
-  sync_install = false,
+  sync_install = true,
   highlight = {
     enable = true,
     disable = {

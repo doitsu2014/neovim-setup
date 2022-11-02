@@ -87,6 +87,12 @@ require('packer').startup(function()
   use { 'dracula/vim', as = 'dracula' }
 end)
 
+require'cmp'.setup {
+ sources = {
+ 	{ name = 'cmp_tabnine' },
+ },
+}
+
 require('nvim-cursorline').setup {
   cursorline = {
     enable = true,

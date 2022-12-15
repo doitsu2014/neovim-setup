@@ -48,7 +48,7 @@ require 'nvim-tree'.setup { -- BEGIN_DEFAULT_OPTS
         adaptive_size = false,
         centralize_selection = false,
         width = 30,
-        height = 30,
+        -- height = 30,
         hide_root_folder = false,
         side = "left",
         preserve_window_proportions = false,
@@ -146,7 +146,7 @@ require 'nvim-tree'.setup { -- BEGIN_DEFAULT_OPTS
     },
     filesystem_watchers = {
         enable = false,
-        interval = 100,
+        --interval = 100,
     },
     git = {
         enable = true,

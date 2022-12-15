@@ -1,6 +1,5 @@
 lua require('init')
 
-colorscheme dracula
 set number relativenumber
 set nu rnu
 

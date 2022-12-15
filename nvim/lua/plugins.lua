@@ -4,6 +4,8 @@ require('plugin-nvimtree');
 require('plugin-telescope');
 require('plugin-treesitter');
 require('plugin-formatter');
+require('github-theme').setup()
+
 
 local tabnine = require('cmp_tabnine.config')
 tabnine.setup({

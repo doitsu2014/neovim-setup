@@ -85,18 +85,8 @@ require('packer').startup(function()
 
   use 'github/copilot.vim'
 
-
-  use({
-    'projekt0n/github-nvim-theme',
-    config = function()
-      require('github-theme').setup({
-      })
-    end
-  })
-
-
-  -- You can alias plugin names
-  use { 'dracula/vim', as = 'dracula' }
+  -- Themes
+  use "EdenEast/nightfox.nvim" -- Packer
 end)
 
 require'cmp'.setup {

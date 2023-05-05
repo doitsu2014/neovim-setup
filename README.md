@@ -1,4 +1,5 @@
 # neovim-setup
+![image](https://user-images.githubusercontent.com/12025741/236415316-c95333f4-ab09-40ef-85ea-babd94463ba8.png)
 
 ## Installation
 

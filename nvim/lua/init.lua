@@ -1,6 +1,6 @@
 vim.cmd [[packadd packer.nvim]]
 
-require('packer').startup(function()
+require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
@@ -10,12 +10,26 @@ require('packer').startup(function()
       "williamboman/mason-lspconfig.nvim",
       "neovim/nvim-lspconfig",
   }
-  use 'mfussenegger/nvim-dap'
+
+  -- Completion
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-cmdline'
-  use 'hrsh7th/nvim-cmp' --completion
+  use 'hrsh7th/nvim-cmp'
+
+  -- For vsnip users.
+  -- use 'hrsh7th/cmp-vsnip'
+  -- use 'hrsh7th/vim-vsnip'
+
+  -- For luasnip users.
+  -- use 'L3MON4D3/LuaSnip'
+  -- use 'saadparwaiz1/cmp_luasnip'
+
+  -- Debugger
+  use 'mfussenegger/nvim-dap'
+
+  -- Beautify
   use "mhartington/formatter.nvim"
 
   -- Markdown

@@ -41,6 +41,6 @@ require('nightfox').setup({
 })
 
 
-require('plugin-togle-term');
+require('plugin-toggle-term');
 
 return

@@ -13,7 +13,6 @@ require('packer').startup(function()
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-cmdline'
   use 'hrsh7th/nvim-cmp' --completion
- 	use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
   use "mhartington/formatter.nvim"
 
   -- Markdown
@@ -65,14 +64,8 @@ require('packer').startup(function()
     'kyazdani42/nvim-tree.lua',
     requires = {
       'kyazdani42/nvim-web-devicons', -- optional, for file icon
-    },
-    tag = 'nightly' -- optional, updated every week. (see issue #1193)
+    }
   }
-
-
-  -- Debugger
-  use 'mfussenegger/nvim-dap'
-
 
   -- Comment
   use {
@@ -82,18 +75,12 @@ require('packer').startup(function()
     end
   }
 
-
   use 'github/copilot.vim'
 
   -- Themes
   use "EdenEast/nightfox.nvim" -- Packer
 end)
 
-require'cmp'.setup {
- sources = {
- 	{ name = 'cmp_tabnine' },
- },
-}
 
 require('nvim-cursorline').setup {
   cursorline = {

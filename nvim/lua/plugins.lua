@@ -4,6 +4,7 @@ require('plugin-nvimtree');
 require('plugin-telescope');
 require('plugin-treesitter');
 require('plugin-formatter');
+require('plugin-comment');
 require('nightfox').setup({
   options = {
     -- Compiled file's destination location

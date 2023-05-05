@@ -87,9 +87,6 @@ require('packer').startup(function(use)
   -- Comment
   use {
     'numToStr/Comment.nvim',
-    config = function()
-      require('Comment').setup()
-    end
   }
 
   use 'github/copilot.vim'
@@ -111,7 +108,6 @@ require('nvim-cursorline').setup {
     hl = { underline = true },
   }
 }
-require('Comment').setup()
 require('plugins')
 
 return

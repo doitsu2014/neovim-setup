@@ -29,9 +29,8 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux"  ]; then
     sudo apt-get install zip unzip -y
     sudo apt-get install python-dev python-pip python3-dev python3-pip
 
-    # neovim 0.7.0
+    # neovim 0.8.x
     sudo apt-get install luajit -y
-    echo 'download and install neovim 0.7.0'
     sudo bash ./script_download_neovim.sh
 fi
 

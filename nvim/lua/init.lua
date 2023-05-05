@@ -10,7 +10,7 @@ require('packer').startup(function()
       "williamboman/mason-lspconfig.nvim",
       "neovim/nvim-lspconfig",
   }
-  use 'nvim-lua/lsp-status.nvim'
+  use 'mfussenegger/nvim-dap'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
@@ -25,9 +25,9 @@ require('packer').startup(function()
   use 'nvim-treesitter/nvim-treesitter'
 
   -- Terminal
-  use { "akinsho/toggleterm.nvim", tag = 'v1.*', config = function()
+  use {"akinsho/toggleterm.nvim", tag = '*', config = function()
     require("toggleterm").setup()
-  end }
+  end}
 
   -- Fuzzy
   use {
@@ -64,9 +64,9 @@ require('packer').startup(function()
 
   -- File Explorer
   use {
-    'kyazdani42/nvim-tree.lua',
+    'nvim-tree/nvim-tree.lua',
     requires = {
-      'kyazdani42/nvim-web-devicons', -- optional, for file icon
+      'nvim-tree/nvim-web-devicons', -- optional
     }
   }
 

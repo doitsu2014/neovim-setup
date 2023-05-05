@@ -40,4 +40,7 @@ require('nightfox').setup({
 
 })
 
+
+require('plugin-togle-term');
+
 return

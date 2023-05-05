@@ -5,8 +5,11 @@ require('packer').startup(function()
   use 'wbthomason/packer.nvim'
 
   -- LSP
-  use 'williamboman/nvim-lsp-installer'
-  use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
+  use {
+      "williamboman/mason.nvim",
+      "williamboman/mason-lspconfig.nvim",
+      "neovim/nvim-lspconfig",
+  }
   use 'nvim-lua/lsp-status.nvim'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'

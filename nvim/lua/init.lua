@@ -9,6 +9,7 @@ require('packer').startup(function(use)
       "williamboman/mason.nvim",
       "williamboman/mason-lspconfig.nvim",
       "neovim/nvim-lspconfig",
+      "nvim-lua/lsp-status.nvim"
   }
 
   -- Completion
@@ -47,27 +48,6 @@ require('packer').startup(function(use)
     requires = { {'nvim-lua/plenary.nvim'} }
   }
 
-  -- Bar
-  use {
-    'romgrk/barbar.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons' }
-  }
-
-  -- Line
-  use({
-    "NTBBloodbath/galaxyline.nvim",
-    -- your statusline
-    config = function()
-      require("galaxyline.themes.eviline")
-    end,
-    -- some optional icons
-    requires = { "kyazdani42/nvim-web-devicons", opt = true }
-  })
-
-  -- Cursor Line
-  use('yamatsum/nvim-cursorline')
-
-
   -- Dashboard
   use { 'glepnir/dashboard-nvim' }
 
@@ -91,21 +71,14 @@ require('packer').startup(function(use)
 
   -- Themes
   use "EdenEast/nightfox.nvim" -- Packer
+
+  -- Tabs
+  use 'nanozuki/tabby.nvim'
+  -- Line
+  use 'freddiehaddad/feline.nvim'
+  use 'nvim-lualine/lualine.nvim'
 end)
 
-
-require('nvim-cursorline').setup {
-  cursorline = {
-    enable = true,
-    timeout = 1000,
-    number = false,
-  },
-  cursorword = {
-    enable = true,
-    min_length = 3,
-    hl = { underline = true },
-  }
-}
 require('plugins')
 
 return

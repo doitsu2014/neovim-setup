@@ -14,10 +14,12 @@ if [ "$(uname)" == "Darwin"  ]; then
     brew install python python3
     # brew install node
     brew install zip unzip
-    # neovim 0.5.x
+    # neovim 0.8.x
     brew install tree-sitter 
     brew install luajit 
     brew install neovim
+    brew install rg fd
+
 
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux"  ]; then
     # this if statement is used to install dependency packages of ubuntu which has the version > 16.x.x
@@ -28,6 +30,7 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux"  ]; then
     sudo apt-get install nodejs npm -y
     sudo apt-get install zip unzip -y
     sudo apt-get install python-dev python-pip python3-dev python3-pip
+    sudo apt-get install apt-get install ripgrep fd-find -y
 
     # neovim 0.8.x
     sudo apt-get install luajit -y

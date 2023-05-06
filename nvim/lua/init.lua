@@ -39,14 +39,12 @@ require('packer').startup(function(use)
   use 'nvim-treesitter/nvim-treesitter'
 
   -- Terminal
-  use {"akinsho/toggleterm.nvim", tag = '*', config = function()
-    require("toggleterm").setup()
-  end}
+  use {"akinsho/toggleterm.nvim", tag = '*'}
 
   -- Fuzzy
   use {
-    'nvim-telescope/telescope.nvim',
-    requires = { { 'nvim-lua/plenary.nvim' } }
+    'nvim-telescope/telescope.nvim', tag = '0.1.1',
+    requires = { {'nvim-lua/plenary.nvim'} }
   }
 
   -- Bar

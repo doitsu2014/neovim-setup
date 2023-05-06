@@ -9,7 +9,10 @@ require("mason").setup({
 })
 
 require("mason-lspconfig").setup({
-  ensure_installed = { "lua_ls", "rust_analyzer", "terraformls", "tsserver", "vimls", "yamlls" }
+  ensure_installed = { "lua_ls", "rust_analyzer", "terraformls", "tsserver", "vimls", "yamlls",
+    -- "omnisharp", 
+    "csharp_ls"
+  }
 })
 
 require("lspconfig").lua_ls.setup {}
@@ -18,6 +21,9 @@ require("lspconfig").terraformls.setup {}
 require("lspconfig").tsserver.setup {}
 require("lspconfig").vimls.setup {}
 require("lspconfig").yamlls.setup {}
+-- require("lspconfig").omnisharp.setup {}
+require("lspconfig").csharp_ls.setup {}
+
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions

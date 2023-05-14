@@ -1,5 +1,6 @@
 # neovim-setup
-![image](https://user-images.githubusercontent.com/12025741/236415316-c95333f4-ab09-40ef-85ea-babd94463ba8.png)
+<img width="1728" alt="image" src="https://github.com/doitsu2014/neovim-setup/assets/12025741/da78177e-b771-44a9-88f3-534de61bb133">
+
 
 ## Installation
 

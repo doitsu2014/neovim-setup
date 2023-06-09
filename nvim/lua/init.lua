@@ -70,7 +70,8 @@ require('packer').startup(function(use)
   use 'github/copilot.vim'
 
   -- Themes
-  use "EdenEast/nightfox.nvim" -- Packer
+  use "EdenEast/nightfox.nvim"
+  use 'Mofiqul/dracula.nvim'
 
   -- Tabs
   use 'nanozuki/tabby.nvim'

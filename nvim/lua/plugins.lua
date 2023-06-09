@@ -7,5 +7,6 @@ require('plugin-formatter');
 require('plugin-comment');
 require('plugin-toggle-term');
 
-require('nightfox.main');
+-- require('nightfox.main');
+require('plugin-dracula');
 return

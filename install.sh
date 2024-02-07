@@ -1,2 +1,3 @@
 bash script_install_dependencies.sh
 bash script_setup_neovim.sh
+bash script_setup_lazy_neovim.sh

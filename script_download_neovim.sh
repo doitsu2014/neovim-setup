@@ -22,8 +22,9 @@ tar xzf $NVIM_TAG
 # tar xzvf $NVIM_TAG # verbosely
 
 echo "Remove if $HOME/$NVIM_UNZIP_NAME does exist"
-rm -R $HOME/$NVIM_UNZIP_NAME
+rm -rf $HOME/$NVIM_UNZIP_NAME
 
 mv $NVIM_UNZIP_NAME $HOME/
+echo "Installed nvim"
 echo 'export PATH=$PATH'":$HOME/$NVIM_UNZIP_NAME/bin" >>~/.profile
 echo 'export PATH=$PATH'":$HOME/$NVIM_UNZIP_NAME/bin" >>~/.zshrc

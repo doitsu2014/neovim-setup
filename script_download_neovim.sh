@@ -1,8 +1,29 @@
-VERSION=v0.9.5
-mkdir -p download
-echo 'download and install neovim' $VERSION
-curl -L https://github.com/neovim/neovim/releases/download/$VERSION/nvim-linux64.tar.gz >nvim-linux64.tar.gz
-tar xzvf nvim-linux64.tar.gz
-mv nvim-linux64 /usr/bin/
-echo 'export PATH=$PATH:/usr/bin/nvim-linux64/bin' >>~/.profile
-echo 'export PATH=$PATH:/usr/bin/nvim-linux64/bin' >>~/.zshrc
+#VERSION=v0.9.5
+VERSION=nightly
+
+NVIM_TAG=nvim-linux64.tar.gz
+NVIM_UNZIP_NAME=nvim-linux64
+
+if [ "$(uname)" == "Darwin" ]; then
+  NVIM_TAG=nvim-macos-arm64.tar.gz
+  NVIM_UNZIP_NAME=nvim-macos-arm64
+fi
+
+echo "create folder downloads $HOME/downloads"
+mkdir -p $HOME/downloads
+echo "download and install neovim" $VERSION
+curl -L https://github.com/neovim/neovim/releases/download/$VERSION/$NVIM_TAG >$HOME/downloads/$NVIM_TAG
+
+echo "Change directory to $HOME/downloads"
+cd $HOME/downloads
+
+echo "Extract $NVIM_TAG"
+tar xzf $NVIM_TAG
+# tar xzvf $NVIM_TAG # verbosely
+
+echo "Remove if $HOME/$NVIM_UNZIP_NAME does exist"
+rm -R $HOME/$NVIM_UNZIP_NAME
+
+mv $NVIM_UNZIP_NAME $HOME/
+echo 'export PATH=$PATH'":$HOME/$NVIM_UNZIP_NAME/bin" >>~/.profile
+echo 'export PATH=$PATH'":$HOME/$NVIM_UNZIP_NAME/bin" >>~/.zshrc

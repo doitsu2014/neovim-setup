@@ -1,19 +1,29 @@
 return {
   {
+    "hrsh7th/nvim-cmp",
+    dependencies = {
+      {
+        "Saecki/crates.nvim",
+        event = { "BufRead Cargo.toml" },
+        opts = {
+          completion = {
+            cmp = { enabled = true },
+          },
+        },
+      },
+    },
+    ---@param opts cmp.ConfigSchema
+    opts = function(_, opts)
+      opts.sources = opts.sources or {}
+      table.insert(opts.sources, { name = "crates" })
+    end,
+  },
+  {
     "nvim-treesitter/nvim-treesitter",
     opts = function(_, opts)
       opts.ensure_installed = opts.ensure_installed or {}
       vim.list_extend(opts.ensure_installed, { "ron", "rust", "toml" })
     end,
-  },
-  {
-    "Saecki/crates.nvim",
-    event = { "BufRead Cargo.toml" },
-    opts = {
-      src = {
-        cmp = { enabled = true },
-      },
-    },
   },
   {
     "mrcjkb/rustaceanvim",
@@ -27,7 +37,7 @@ return {
           end, { desc = "Code Action", buffer = bufnr })
           vim.keymap.set("n", "<leader>dr", function()
             vim.cmd.RustLsp("debuggables")
-          end, { desc = "Rust debuggables", buffer = bufnr })
+          end, { desc = "Rust Debuggables", buffer = bufnr })
         end,
         default_settings = {
           -- rust-analyzer language server configuration
@@ -35,7 +45,9 @@ return {
             cargo = {
               allFeatures = true,
               loadOutDirsFromCheck = true,
-              runBuildScripts = true,
+              buildScripts = {
+                enable = true,
+              },
             },
             -- Add clippy lints for Rust.
             checkOnSave = {
@@ -57,54 +69,13 @@ return {
     },
     config = function(_, opts)
       vim.g.rustaceanvim = vim.tbl_deep_extend("keep", vim.g.rustaceanvim or {}, opts or {})
+      if vim.fn.executable("rust-analyzer") == 0 then
+        LazyVim.error(
+          "**rust-analyzer** not found in PATH, please install it.\nhttps://rust-analyzer.github.io/",
+          { title = "rustaceanvim" }
+        )
+      end
     end,
-  },
-  {
-    "hrsh7th/nvim-cmp",
-    dependencies = {
-      {
-        "Saecki/crates.nvim",
-        event = { "BufRead Cargo.toml" },
-        opts = {
-          src = {
-            cmp = { enabled = true },
-          },
-        },
-      },
-    },
-    ---@param opts cmp.ConfigSchema
-    opts = function(_, opts)
-      opts.sources = opts.sources or {}
-      table.insert(opts.sources, { name = "crates" })
-    end,
-  },
-  {
-    "neovim/nvim-lspconfig",
-    opts = {
-      servers = {
-        rust_analyzer = {},
-        taplo = {
-          keys = {
-            {
-              "K",
-              function()
-                if vim.fn.expand("%:t") == "Cargo.toml" and require("crates").popup_available() then
-                  require("crates").show_popup()
-                else
-                  vim.lsp.buf.hover()
-                end
-              end,
-              desc = "Show Crate Documentation",
-            },
-          },
-        },
-      },
-      setup = {
-        rust_analyzer = function()
-          return true
-        end,
-      },
-    },
   },
   {
     "williamboman/mason.nvim",

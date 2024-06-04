@@ -5,6 +5,9 @@ return {
       vim.list_extend(opts.ensure_installed, {
         "terraform",
         "hcl",
+        "ron",
+        "rust",
+        "toml",
       })
     end
   end,

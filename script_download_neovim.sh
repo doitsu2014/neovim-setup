@@ -1,4 +1,4 @@
-VERSION=v0.10.2
+VERSION=v0.10.3
 
 NVIM_TAG=nvim-linux64.tar.gz
 NVIM_UNZIP_NAME=nvim-linux64

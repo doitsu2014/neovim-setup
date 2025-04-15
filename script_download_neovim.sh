@@ -1,7 +1,7 @@
-VERSION=v0.10.4
+VERSION=v0.11.0
 
-NVIM_TAG=nvim-linux64.tar.gz
-NVIM_UNZIP_NAME=nvim-linux64
+NVIM_TAG=nvim-linux-x86_64.tar.gz
+NVIM_UNZIP_NAME=nvim-linux-x86_64
 
 if [ "$(uname)" == "Darwin" ]; then
   NVIM_TAG=nvim-macos-arm64.tar.gz
